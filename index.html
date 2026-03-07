@@ -1,26 +1,466 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<title>Privacy Policy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 · Privacy Policy | RokuDoku</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .header .date {
+            margin-top: 15px;
+            font-size: 0.95em;
+            opacity: 0.8;
+        }
+        
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .lang-btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .lang-btn.active {
+            background: #4CAF50;
+            color: white;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .content {
+            padding: 40px;
+            min-height: 500px;
+        }
+        
+        .policy-section {
+            display: none;
+        }
+        
+        .policy-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h2 {
+            color: #4CAF50;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e9ecef;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #2196F3;
+            margin: 25px 0 10px 0;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin: 15px 0;
+            color: #444;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #444;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        .highlight {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+        
+        .highlight p {
+            margin: 5px 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer p {
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .footer .contact {
+            color: #4CAF50;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .footer .contact:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .lang-btn {
+                padding: 8px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<h1>Privacy Policy</h1>
-
-<p>This application respects and protects the privacy of users.</p>
-
-<h2>Information We Collect</h2>
-<p>The app may collect basic information such as device information, usage statistics, and crash reports.</p>
-
-<h2>How We Use Information</h2>
-<p>The information collected is used to improve app functionality and user experience.</p>
-
-<h2>Third-Party Services</h2>
-<p>The app may use third-party services such as Google Firebase or Google Analytics.</p>
-
-<h2>Contact</h2>
-<p>If you have questions contact: amyherml@gmail.com</p>
-
+    <div class="container">
+        <div class="header">
+            <h1>🎮 RokuDoku</h1>
+            <div class="subtitle">隐私政策 · Privacy Policy</div>
+            <div class="date">更新日期 / Last Updated: 2026年3月7日</div>
+            <div class="date">生效日期 / Effective Date: 2026年3月7日</div>
+        </div>
+        
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLanguage('zh')">🇨🇳 中文</button>
+            <button class="lang-btn" onclick="switchLanguage('en')">🇬🇧 English</button>
+        </div>
+        
+        <div class="content">
+            <!-- 中文版隐私政策 -->
+            <div id="policy-zh" class="policy-section active">
+                <h2>导言</h2>
+                <p>欢迎使用 RokuDoku！我们非常重视您的隐私。本隐私政策旨在向您说明，在使用我们的数独游戏应用时，我们如何（或不如何）处理您的信息。</p>
+                
+                <div class="highlight">
+                    <p><strong>📌 核心承诺：RokuDoku 是一款完全离线的游戏，不收集任何个人数据。</strong></p>
+                </div>
+                
+                <h2>1. 我们收集的信息</h2>
+                <p><span class="badge">✅ 零收集</span><strong>本应用不收集任何个人数据。</strong></p>
+                <p>RokuDoku 作为一款纯粹的数独游戏，设计原则是保护您的隐私：</p>
+                <ul>
+                    <li><strong>无账户系统</strong> - 您无需注册、登录或提供任何个人信息即可使用本应用。</li>
+                    <li><strong>无网络连接</strong> - 应用不需要互联网权限，完全离线运行，不会向任何服务器传输数据。</li>
+                    <li><strong>无数据追踪</strong> - 我们不使用任何分析工具、统计服务或第三方 SDK 来追踪用户行为。</li>
+                    <li><strong>无广告</strong> - 应用不含任何广告，因此不会通过广告网络收集数据。</li>
+                    <li><strong>本地存储</strong> - 游戏进度（如当前谜题、已填数字）仅保存在您的设备本地，我们无法访问这些信息。</li>
+                </ul>
+                
+                <h3>具体来说，我们不会收集：</h3>
+                <ul>
+                    <li>📍 位置信息（GPS、网络位置）</li>
+                    <li>📱 设备标识符（IMEI、Android ID、MAC地址）</li>
+                    <li>👤 个人信息（姓名、邮箱、电话号码）</li>
+                    <li>📷 照片、视频或音频</li>
+                    <li>📞 联系人、通话记录</li>
+                    <li>💳 财务信息</li>
+                    <li>📊 应用使用情况统计</li>
+                    <li>🌐 浏览历史</li>
+                </ul>
+                
+                <h2>2. 权限说明</h2>
+                <p>RokuDoku <strong>不申请任何敏感权限</strong>。应用仅使用运行所需的基本权限：</p>
+                <ul>
+                    <li><strong>无任何权限请求</strong> - 安装后即可运行，不会弹出任何权限请求对话框。</li>
+                </ul>
+                
+                <h2>3. 数据存储</h2>
+                <p>所有游戏数据仅存储在您的设备本地：</p>
+                <ul>
+                    <li><strong>游戏进度</strong> - 通过 Android ViewModel 在内存中保存，屏幕旋转时不会丢失。</li>
+                    <li><strong>无外部存储</strong> - 我们不会将任何数据写入外部存储或共享存储空间。</li>
+                    <li><strong>卸载即删除</strong> - 卸载应用后，所有相关数据将从您的设备中完全删除。</li>
+                </ul>
+                
+                <h2>4. 第三方服务</h2>
+                <p>本应用 <strong>不集成任何第三方服务、SDK 或 API</strong>，包括但不限于：</p>
+                <ul>
+                    <li>❌ 广告服务（AdMob、Facebook Audience Network 等）</li>
+                    <li>❌ 分析工具（Google Analytics、Firebase Analytics 等）</li>
+                    <li>❌ 崩溃报告工具（Crashlytics 等）</li>
+                    <li>❌ 社交媒体集成</li>
+                </ul>
+                <p>因此，不会有任何第三方通过我们的应用收集您的信息。</p>
+                
+                <h2>5. 儿童隐私</h2>
+                <p>RokuDoku 适合所有年龄段的用户，包括儿童。由于我们：</p>
+                <ul>
+                    <li>✅ 不收集任何个人信息</li>
+                    <li>✅ 不包含任何广告</li>
+                    <li>✅ 不包含应用内购买</li>
+                    <li>✅ 不包含社交功能</li>
+                </ul>
+                <p>因此，本应用完全符合儿童在线隐私保护法的要求，家长无需担心儿童的隐私安全。</p>
+                
+                <h2>6. 数据安全</h2>
+                <p>由于我们根本不收集数据，因此不存在数据泄露的风险。您的隐私从设计之初就得到了保护。</p>
+                
+                <h2>7. 隐私政策的更新</h2>
+                <p>如果我们未来对应用进行重大更新，导致数据收集方式发生变化，我们会：</p>
+                <ul>
+                    <li>📢 在本页面更新隐私政策版本</li>
+                    <li>📧 在应用更新说明中明确告知</li>
+                    <li>⚖️ 在收集任何新数据前，通过弹窗获得您的明确同意</li>
+                </ul>
+                <p>继续使用应用即表示您同意更新后的政策。</p>
+                
+                <h2>8. 您的权利</h2>
+                <p>由于我们不收集任何数据，因此：</p>
+                <ul>
+                    <li>🔍 无需请求数据访问 - 因为没有数据被收集</li>
+                    <li>🗑️ 无需请求数据删除 - 因为没有数据存储在我们的服务器上</li>
+                    <li>⚡ 完全控制 - 所有游戏数据都在您的设备上，您可以随时通过卸载应用来删除所有数据</li>
+                </ul>
+                
+                <h2>9. 联系我们</h2>
+                <p>如果您对本隐私政策有任何疑问、建议或顾虑，请通过以下方式联系我们：</p>
+                <div class="highlight">
+                    <p><strong>📧 邮箱：</strong> amyherml@gmail.com</p>
+                    <p><strong>📱 应用名称：</strong> RokuDoku</p>
+                    <p><strong>👤 开发者：</strong> TinyCoder</p>
+                </div>
+                <p>我们会在 3 个工作日内回复您的邮件。</p>
+                
+                <h2>10. 法律合规</h2>
+                <p>本隐私政策符合以下法律法规的要求：</p>
+                <ul>
+                    <li>🇪🇺 GDPR (欧盟通用数据保护条例)</li>
+                    <li>🇺🇸 COPPA (美国儿童在线隐私保护法)</li>
+                    <li>🇨🇳 PIPL (中华人民共和国个人信息保护法)</li>
+                    <li>🇧🇷 LGPD (巴西通用数据保护法)</li>
+                    <li>🇯🇵 APPI (日本个人信息保护法)</li>
+                </ul>
+                
+                <h2>结语</h2>
+                <p>感谢您选择 RokuDoku！我们致力于为您提供最纯粹、最有趣的数独游戏体验，同时最大限度地保护您的隐私。放心享受游戏，您的数据始终属于您自己。</p>
+                <p style="margin-top: 20px;"><strong>🎮 快乐解谜，隐私无忧！</strong></p>
+            </div>
+            
+            <!-- 英文版隐私政策 -->
+            <div id="policy-en" class="policy-section">
+                <h2>Introduction</h2>
+                <p>Welcome to RokuDoku! We take your privacy seriously. This Privacy Policy explains how we (or don't) handle your information when you use our Sudoku puzzle game.</p>
+                
+                <div class="highlight">
+                    <p><strong>📌 Core Promise: RokuDoku is a completely offline game that collects NO personal data.</strong></p>
+                </div>
+                
+                <h2>1. Information We Collect</h2>
+                <p><span class="badge">✅ Zero Collection</span><strong>This app collects no personal data whatsoever.</strong></p>
+                <p>RokuDoku is designed with privacy as a priority:</p>
+                <ul>
+                    <li><strong>No Account System</strong> - No registration, login, or personal information required.</li>
+                    <li><strong>No Internet Connection</strong> - The app requires no internet permissions and runs completely offline.</li>
+                    <li><strong>No Tracking</strong> - We don't use any analytics tools, statistics services, or third-party SDKs.</li>
+                    <li><strong>No Ads</strong> - The app contains no advertisements of any kind.</li>
+                    <li><strong>Local Storage Only</strong> - Game progress is saved only on your device. We cannot access it.</li>
+                </ul>
+                
+                <h3>Specifically, we DO NOT collect:</h3>
+                <ul>
+                    <li>📍 Location data (GPS or network-based)</li>
+                    <li>📱 Device identifiers (IMEI, Android ID, MAC address)</li>
+                    <li>👤 Personal information (name, email, phone number)</li>
+                    <li>📷 Photos, videos, or audio</li>
+                    <li>📞 Contacts or call logs</li>
+                    <li>💳 Financial information</li>
+                    <li>📊 Usage statistics</li>
+                    <li>🌐 Browsing history</li>
+                </ul>
+                
+                <h2>2. Permissions</h2>
+                <p>RokuDoku <strong>requests no sensitive permissions</strong>. The app uses only basic permissions required to run:</p>
+                <ul>
+                    <li><strong>No Permissions Required</strong> - The app runs immediately after installation without any permission requests.</li>
+                </ul>
+                
+                <h2>3. Data Storage</h2>
+                <p>All game data is stored locally on your device:</p>
+                <ul>
+                    <li><strong>Game Progress</strong> - Saved in memory via Android ViewModel (persists through screen rotation).</li>
+                    <li><strong>No External Storage</strong> - We never write data to external or shared storage.</li>
+                    <li><strong>Uninstall = Delete</strong> - All data is completely removed when you uninstall the app.</li>
+                </ul>
+                
+                <h2>4. Third-Party Services</h2>
+                <p>This app <strong>integrates no third-party services, SDKs, or APIs</strong>, including but not limited to:</p>
+                <ul>
+                    <li>❌ Advertising services (AdMob, Facebook Audience Network, etc.)</li>
+                    <li>❌ Analytics tools (Google Analytics, Firebase Analytics, etc.)</li>
+                    <li>❌ Crash reporting tools (Crashlytics, etc.)</li>
+                    <li>❌ Social media integration</li>
+                </ul>
+                <p>No third party can collect your information through our app.</p>
+                
+                <h2>5. Children's Privacy</h2>
+                <p>RokuDoku is suitable for users of all ages, including children. Because we:</p>
+                <ul>
+                    <li>✅ Collect no personal information</li>
+                    <li>✅ Include no advertisements</li>
+                    <li>✅ Have no in-app purchases</li>
+                    <li>✅ Have no social features</li>
+                </ul>
+                <p>The app fully complies with child privacy protection laws (COPPA, GDPR-K, etc.). Parents can feel confident about their children's privacy.</p>
+                
+                <h2>6. Data Security</h2>
+                <p>Since we collect no data, there is no risk of data breach. Your privacy is protected by design.</p>
+                
+                <h2>7. Changes to This Privacy Policy</h2>
+                <p>If future updates change how we handle data, we will:</p>
+                <ul>
+                    <li>📢 Update this page with the new policy version</li>
+                    <li>📧 Clearly state changes in app update notes</li>
+                    <li>⚖️ Obtain your explicit consent before collecting any new data</li>
+                </ul>
+                <p>Continued use of the app constitutes acceptance of the updated policy.</p>
+                
+                <h2>8. Your Rights</h2>
+                <p>Since we collect no data:</p>
+                <ul>
+                    <li>🔍 No need to request data access - nothing is collected</li>
+                    <li>🗑️ No need to request data deletion - nothing is stored on our servers</li>
+                    <li>⚡ Complete control - all game data is on your device; uninstall to delete everything</li>
+                </ul>
+                
+                <h2>9. Contact Us</h2>
+                <p>For questions, concerns, or feedback about this Privacy Policy:</p>
+                <div class="highlight">
+                    <p><strong>📧 Email:</strong> amyherml@gmail.com</p>
+                    <p><strong>📱 App Name:</strong> RokuDoku</p>
+                    <p><strong>👤 Developer:</strong> TinyCoder</p>
+                </div>
+                <p>We will respond within 3 business days.</p>
+                
+                <h2>10. Legal Compliance</h2>
+                <p>This Privacy Policy complies with:</p>
+                <ul>
+                    <li>🇪🇺 GDPR (General Data Protection Regulation - EU)</li>
+                    <li>🇺🇸 COPPA (Children's Online Privacy Protection Act - US)</li>
+                    <li>🇨🇳 PIPL (Personal Information Protection Law - China)</li>
+                    <li>🇧🇷 LGPD (Lei Geral de Proteção de Dados - Brazil)</li>
+                    <li>🇯🇵 APPI (Act on Protection of Personal Information - Japan)</li>
+                </ul>
+                
+                <h2>Conclusion</h2>
+                <p>Thank you for choosing RokuDoku! We're committed to providing the most enjoyable Sudoku experience while protecting your privacy. Rest assured, your data always belongs to you.</p>
+                <p style="margin-top: 20px;"><strong>🎮 Happy Puzzling, Privacy Protected!</strong></p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 RokuDoku. All rights reserved.</p>
+            <p>📧 <a href="mailto:amyherml@gmail.com" class="contact">amyherml@gmail.com</a></p>
+            <p style="margin-top: 15px; font-size: 0.9em;">This privacy policy was created to be transparent and easy to understand.<br>We believe in privacy by design.</p>
+        </div>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            // 切换按钮样式
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // 切换内容
+            document.querySelectorAll('.policy-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            if (lang === 'zh') {
+                document.getElementById('policy-zh').classList.add('active');
+            } else {
+                document.getElementById('policy-en').classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
